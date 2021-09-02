@@ -60,4 +60,4 @@ app.get("/lyrics", async (req, res) => {
     res.json({lyrics})
 })
 
-app.listen(3001)
+app.listen(master.d31j3nijmo1m79.amplifyapp.com)
