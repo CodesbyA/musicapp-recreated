@@ -7,7 +7,7 @@ const [refreshToken, setRefreshToken] = useState()
 const [expiresIn, setExpiresIn] = useState()
 
 useEffect(() => {
-    axios.post('https://master.d31j3nijmo1m79.amplifyapp.com/login', {
+    axios.post('http://localhost:3001/login', {
         code,
 }).then(res => {
     setAccessToken(res.data.accessToken)
@@ -23,7 +23,7 @@ useEffect(() => {
     if (!refreshToken || !expiresIn) return
     const interval = setInterval(() => {
         axios
-        .post('https://master.d31j3nijmo1m79.amplifyapp.com/refresh', {
+        .post('http://localhost:3001/refresh', {
             refreshToken,
     }).then(res => {
         setAccessToken(res.data.accessToken)
