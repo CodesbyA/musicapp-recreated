@@ -24,8 +24,8 @@ spotifyApi
 .refreshAccessToken()
 .then(data => {
 res.json({
-    accessToken:data.body.access_token,
-    expiresIn: data.body.expires_in
+    accessToken:data.body.accessToken,
+    expiresIn: data.body.expiresIn
 })      })
     .catch(() => {
         res.sendStatus(400)
@@ -60,4 +60,4 @@ app.get("/lyrics", async (req, res) => {
     res.json({lyrics})
 })
 
-app.listen(443)
+app.listen(3001)
