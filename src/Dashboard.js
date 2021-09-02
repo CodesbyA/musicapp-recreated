@@ -28,7 +28,7 @@ useEffect(() => {
     if(!currentTrack) return
 
     axios
-    .get("http://localhost:3001/lyrics", {
+    .get("https://musicapiapp.herokuapp.com/lyrics", {
         params: {
             track: currentTrack.title,
             artist: currentTrack.artist,
